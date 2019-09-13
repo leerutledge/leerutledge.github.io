@@ -1,0 +1,1 @@
+web: gunicorn splitCalculator:app --log-file=-
