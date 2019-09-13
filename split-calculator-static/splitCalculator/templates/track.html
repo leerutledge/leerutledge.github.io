@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<html lang="en">
+	<head>
+		<title>SplitCalculator</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	</head>
+
+	<body>
+		<div class="background">
+			<header>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-5 vcenterl">
+							<p class="splitCalculatorText"><a href="/">Royalty Split Calculator</a></p>
+						</div>
+						<div class="col-md-1 header-item">
+							<!-- Pay period -->
+							<select class="pay-period">
+								{% for pay_period in pay_periods %}
+								{% if pay_period == pay_period_selected %}
+								<option value="{{ pay_period }}" selected>{{ pay_period }}</option>
+								{% else %}
+								<option value="{{ pay_period }}">{{ pay_period }}</option>
+								{% endif %}
+								{% endfor %}
+							</select>
+						</div>
+						<div class="col-md-1 header-item">
+							<!-- Total earnings -->
+							<p>$0.00</p>
+						</div>
+						<div class="col-md-2 vcenterr">
+							<p class="userProjects">{{ logname }} | <a href="/accounts/logout/">logout</a></p>
+						</div>
+					</div>
+				</div>
+			</header>
+			<section class="song">
+				<!-- MAKE THIS ONE WEBPAGE WITH THE PROJECT LEVEL AND HAVE THE REACT JS ADD THE TRACK PATH TO THE NAVIGATION PART AND SWAP THE BODY FOR THE SONG INFO -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="row flex" style="margin-bottom: 25px; width: 100%">
+							<!-- Path to current page for navigation -->
+							<div class="col-md-12" style="font-family: times_sans_serif;"><a href="/project/{{ project.slug }}">{{ project.title }}</a> > {{ track.title }}</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="container-fluid card" style="padding-bottom: 20px;">
+							<div class="row" style="width: 100%;">
+								<div class="col-md-2 metadata-label">Song Title</div>
+								<div class="col-md-2 metadata-label">UPC</div>
+								<div class="col-md-2 metadata-label">ISRC</div>
+								<div class="col-md-2 metadata-label">Total Earnings</div>
+								<div class="col-md-2 metadata-label">Your Earnings</div>
+							</div>
+							<div class="row" style="width: 100%;">
+								<div class="col-md-2 metadata-value">{{ track.title }}</div>
+								<div class="col-md-2 metadata-value">{{ track.upc }}</div>
+								<div class="col-md-2 metadata-value">{{ track.isrc }}</div>
+								<div class="col-md-2 metadata-value">${{'%0.2f'| format(track.total_earnings|float)}}</div>
+								<div class="col-md-2 metadata-value">${{'%0.2f'| format(track.your_earnings|float)}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# splitCalculatortest
+#
+# Check style then Clean, build and start server
+
+# Stop on errors, print commands
+set -e
+set -x
+
+# Run all unit tests
+python -m unittest discover --start-directory tests --verbose
+
+# Check style
+pycodestyle splitCalculator
+pydocstyle splitCalculator
+pylint --reports=n --disable=cyclic-import splitCalculator
+
+# Clean
+#rm -rf splitCalculator/html
+
+# Build
+#splitCalculatorgenerator splitCalculator
+
+# Serve
+#cd splitCalculator/html
+#python3 -m http.server 8000
+
+# Validate Hand Coded HTML
+splitCalculatortest-html --ignore JAVA_TOOL_OPTIONS --root html
+
+# Validate Generated HTML
+splitCalculatortest-html --ignore JAVA_TOOL_OPTIONS --root splitCalculator/html

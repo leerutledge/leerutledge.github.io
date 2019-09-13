@@ -1,0 +1,300 @@
+header:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	display: inline-block;
+	border-bottom: 1px solid #dbdbdb;
+	width: 100%;
+	background-color: white;
+	vertical-align: middle;
+}
+
+body {
+	margin: 0px;
+}
+
+.background {
+	width: 100%;
+	background-color: #f7f7f7;
+}
+
+.scLogoDiv {
+	position: relative;
+	float: left;
+	padding: 10px;
+	height: 50px;
+	display: table-cell;
+}
+
+.logo {
+	height: 40px;
+	width: auto;
+	padding: -10px;
+	margin-top: 5px;
+}
+
+.vl {
+	position: relative;
+	float: left;
+	border-left: 1px solid black;
+	height: 50px;
+	top: 10px;
+}
+
+/*.scFontDiv {
+	position: relative;
+	float: left;
+	padding: 10px;
+	height: 50px;
+	display: table-cell;
+}
+*/
+.splitCalculatorText {
+	/*position: relative;*/
+	color: #493e63;
+	font-family: times_sans_serif;
+	font-size: 150%;
+}
+
+.userProjects {
+	color: #493e63;
+	font-family: arial;
+	float: right;
+}
+
+.uploadFile {
+	font-family: times_sans_serif;
+	border-radius: 5px;
+	background-color: #dbdbdb;
+	color: #493e63;
+	text-align: center;
+	float: right;
+	/*margin-right: 15px;*/
+	border: 1px solid #dbdbdb;
+}
+
+.vcenterl {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.vcenterr {
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.header-item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+select.pay-period {
+	position: relative;
+	padding-left: 6px;
+	border: none;
+	background-color: white;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+.metadata-label {
+	margin-top: 15px;
+	font-family: times_sans_serif;
+	font-weight: bold;
+}
+
+.metadata-value {
+	margin-top: 15px;
+	font-family: arial;
+}
+/*.scUserDiv {
+	position: relative;
+	float: right;
+	padding: 10px;
+	height: 50px;
+	display: table-cell;
+	margin-right: 15px;
+}
+*/
+.projects {
+	background-color: #f7f7f7;
+	padding-top: 100px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.tracks {
+	background-color: #f7f7f7;
+	padding-top: 100px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.song {
+	background-color: #f7f7f7;
+	padding-top: 100px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.card {
+	background-color: white;
+	margin: 0 auto;
+	width: auto;
+	height: auto;
+	border: 1px solid #dbdbdb;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+.album-info-topbar {
+	height: auto;
+	width: 100%;
+	font-family: times_sans_serif;
+}
+
+.album-art-thumbnail img {
+	float: left;
+	margin-top: 15px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+.cardTopBar {
+	padding: 15px;
+	padding-bottom: 0px;
+}
+
+.thumbnail {
+	float: left;
+	display: inline-block;
+	background-color: red;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+}
+
+.thumbnailPhoto {
+	/*object-fit: fill;*/
+	/*border-radius: 50%;*/
+	/*height: 25px;*/
+	width: 25px;
+}
+
+.album {
+	float: left;
+	display: inline-block;
+	font-size: 12px;
+	color: black;
+	font-family: arial;
+}
+
+.releaseDate {
+	float: right;
+	display: inline-block;
+	font-size: 12px;
+	color: #c9c9c9;
+	font-family: arial;
+}
+
+.project img {
+	margin-top: 15px;
+	width: 100%;
+	height: auto;
+}
+
+.tracklist {
+	width: 100%;
+}
+
+.tracks {
+	font-size: 12px;
+	font-family: arial;
+}
+
+.userPage {
+	background-color: #f7f7f7;
+	font-size: 12px;
+	font-family: arial;
+}
+
+.profileInfo {
+	margin-left: 25px;
+}
+
+.posGrid {
+	margin-left: 25px;
+}
+
+.post {
+	display: inline-block;
+	width: 250px;
+	height: auto;
+	margin: 10px;
+	margin-left: 25px;
+}
+
+.post img {
+	width: 250px;
+	height: auto;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	font-weight: 1;
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+@font-face {
+	font-family: 'italian_breakfast';
+	src: url('fonts/Billabong (Instagram).ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'times_sans_serif';
+	src: url('fonts/TIMESS__.ttf') format('truetype');
+}

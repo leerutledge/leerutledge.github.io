@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<html lang="en">
+	<head>
+		<title>SplitCalculator</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="background">
+			<header>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-5 vcenterl">
+							<p class="splitCalculatorText"><a href="/">Royalty Split Calculator</a></p>
+						</div>
+						<div class="col-md-1 header-item">
+							<!-- Pay period -->
+							<select class="pay-period">
+								{% for pay_period in pay_periods %}
+								{% if pay_period == pay_period_selected %}
+								<option value="{{ pay_period }}" selected>{{ pay_period }}</option>
+								{% else %}
+								<option value="{{ pay_period }}">{{ pay_period }}</option>
+								{% endif %}
+								{% endfor %}
+							</select>
+						</div>
+						<div class="col-md-1 header-item">
+							<!-- Total earnings -->
+							<p>$0.00</p>
+						</div>
+						<div class="col-md-2 vcenterr">
+							<p class="userProjects">{{ logname }} | <a href="/accounts/logout/">logout</a></p>
+						</div>
+					</div>
+				</div>
+			</header>
+			<section class="projects">
+				<div class="container-fluid">
+					<div class="row flex" style="margin-bottom: 25px;">
+						<!-- HAVE PROJECTS LOAD DYNAMICALLY THE PROJECTS IN GRID, CONTRACTS LIST ALL SONGS YOU ARE A PART OF AND YOUR SPLIT, POSSIBLY THE DOCUMENTS IN WRITING AS WELL, RECEIPTS ARE SCREENSHOTS OF VENMO -->
+						<!-- instead of a link, set a bool and put an if-then down below, render only what tab is selected -->
+						<div class="col-md-2" style="font-family: times_sans_serif;"><a href="...">Projects</a></div>
+						<div class="col-md-2" style="font-family: times_sans_serif;"><a href="...">Contracts</a></div>
+						<div class="col-md-2" style="font-family: times_sans_serif;"><a href="...">Receipts</a></div>
+						<div class="col-md-2" style="float: right; padding-right: 0px;">
+							<!-- <button type="submit" class="uploadFile">Upload File</button> -->
+							<!-- MAKE THIS CONDITIONED ON WHAT TAB YOU HAVE UP, PROJECTS UPLOAD CSV, CONTRACTS UPLOAD CSV, RECEIPTS UPLOAD DOCUMENT -->
+					        <form action="" method="post" enctype="multipart/form-data" class="uploadFile-wrapper">
+								<!-- <input type="file" name="file"> -->
+								<!-- <button class="uploadFile-btn">Upload File</button> -->
+								<input type="file" id="upload_file" value="Upload File" style="display: none;"></input>
+								<button id="upload_file-btn" class="uploadFile">Upload File</button>
+								<script type="text/javascript">$('#upload_file-btn').click(function(){ $('#upload_file').trigger('click'); });</script>
+								<!-- <input type="file" name="upload_file" value="Upload File" class="custom-file-input"/> -->
+								<!-- <input type="file" onchange="this.form.submit()" name="upload_file" value="Upload File" /> -->
+							</form>
+						</div>
+					</div>
+					<div class="row flex">
+						{% for project in projects %}
+						<!-- Castling : Sky -->
+						<div class="col-md-4">
+							<div class="container-fluid card">
+								<div class="row cardTopBar">
+									<div class="col-md-6 album">
+										<a href="/project/{{ project.slug }}/">
+											<b>{{ project.title }}</b>
+										</a>
+									</div>
+									<div class="col-md-6 releaseDate">{{ project.releasedate }}</div>
+								</div>
+								<div class="row project">
+									<a href="/project/{{ project.slug }}/">
+										<img class="photo" alt="userProject" src="/static/images/{{ project.coverart }}">
+									</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

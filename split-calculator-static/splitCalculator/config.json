@@ -1,0 +1,227 @@
+[
+	{
+		"url": "/",
+		"template": "index.html",
+		"context": {
+			"logname": "Kakuyon",
+			"pay_period_selected": "Jul - Aug",
+			"pay_periods": [
+				"Jun - Jul",
+				"Jul - Aug",
+				"Aug - Sep"
+			],
+			"projects": [
+				{
+					"slug": "ngaf",
+					"title": "Now Go And Flourish",
+					"release_date": "6 January, 2017",
+					"cover_art": "/images/nowgo-front.jpg"
+				},
+				{
+					"slug": "rich",
+					"title": "Rich",
+					"release_date": "26 October, 2018",
+					"cover_art": "/images/RICH-K.jpg"
+				},
+				{
+					"slug": "castlingsky",
+					"title": "Castling : Sky",
+					"release_date": "23 August, 2019",
+					"cover_art": "/images/skytestcolor.jpg"
+				}
+			]
+		}
+	},
+	{
+		"url": "/project/castlingsky/",
+		"template": "project.html",
+		"context": {
+			"logname": "Kakuyon",
+			"pay_period_selected": "Jul - Aug",
+			"pay_periods": [
+				"Jun - Jul",
+				"Jul - Aug",
+				"Aug - Sep"
+			],
+			"project": {
+				"slug": "castlingsky",
+				"title": "Castling : Sky",
+				"release_date": "23 August, 2019",
+				"cover_art": "/images/skytestcolor.jpg"
+			},
+			"tracks": [
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "1",
+					"title": "Early Morning Sun",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "2",
+					"title": "Lavish By Nature",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "3",
+					"title": "Hypnosis",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "4",
+					"title": "Washed Away",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "5",
+					"title": "Miss Starry",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "6",
+					"title": "Genevieve",
+					"earnings": "$0.00"
+				}
+			]
+		}
+	},
+	{
+		"url": "/project/ngaf/",
+		"template": "project.html",
+		"context": {
+			"logname": "Kakuyon",
+			"pay_period_selected": "Jul - Aug",
+			"pay_periods": [
+				"Jun - Jul",
+				"Jul - Aug",
+				"Aug - Sep"
+			],
+			"project": {
+				"url": "/project/ngaf/",
+				"title": "Now Go And Flourish",
+				"release_date": "23 August, 2019",
+				"cover_art": "/images/nowgo-front.jpg"
+			},
+			"tracks": [
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "1",
+					"title": "Sugar",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "2",
+					"title": "Troubled Water",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "3",
+					"title": "Leverage",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "4",
+					"title": "Nirvana",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "5",
+					"title": "Trough / Crest... (Interlude)",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "6",
+					"title": "Molt",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "7",
+					"title": "Sunny Soon",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "8",
+					"title": "I See Ya",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "9",
+					"title": "Perfect",
+					"earnings": "$0.00"
+				},
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "10",
+					"title": "Ethereal",
+					"earnings": "$0.00"
+				}
+			]
+		}
+	},
+	{
+		"url": "/project/rich/",
+		"template": "project.html",
+		"context": {
+			"logname": "Kakuyon",
+			"pay_period_selected": "Jul - Aug",
+			"pay_periods": [
+				"Jun - Jul",
+				"Jul - Aug",
+				"Aug - Sep"
+			],
+			"project": {
+				"url": "/project/rich/",
+				"title": "Rich",
+				"release_date": "26 October, 2018",
+				"cover_art": "/images/RICH-K.jpg"
+			},
+			"tracks": [
+				{
+					"url": "/project/castlingsky/track/ems/",
+					"number": "1",
+					"title": "Rich",
+					"earnings": "$0.00"
+				}
+			]
+		}
+	},
+	{
+		"url": "/project/castlingsky/track/ems/",
+		"template": "track.html",
+		"context": {
+			"logname": "Kakuyon",
+			"pay_period_selected": "Jul - Aug",
+			"pay_periods": [
+				"Jun - Jul",
+				"Jul - Aug",
+				"Aug - Sep"
+			],
+			"project": {
+				"url": "/project/castlingsky/",
+				"title": "Castling : Sky",
+				"release_date": "23 August, 2019",
+				"cover_art": "/images/skytestcolor.jpg"
+			},
+			"track": {
+				"url": "/project/castlingsky/track/ems",
+				"title": "Early Morning Sun",
+				"upc": "12345678",
+				"isrc": "1234567890",
+				"total_earnings": "$0.00",
+				"your_earnings": "$0.00"
+			}
+		}
+	}
+]
